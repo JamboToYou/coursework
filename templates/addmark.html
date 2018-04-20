@@ -1,0 +1,14 @@
+{% extends  "base.html" %}
+
+{% block content %}
+    <div>
+        <form action="/addmark" method="post">
+            {% from "macros.html" import render %}
+            {{ form.hidden_tag() }}
+            {{ render(form.mark) }}
+            {{ render(form.studentId) }}
+            {{ render(form.subjectId) }}
+            {{ form.submit() }}
+        </form>
+    </div>
+{% endblock %}

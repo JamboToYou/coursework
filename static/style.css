@@ -1,0 +1,10 @@
+#option {
+    width: 500px;
+    height: 200px;
+    background: #ff6;
+}
+
+#option button{
+    width: 100px;
+    height: 50px;
+}

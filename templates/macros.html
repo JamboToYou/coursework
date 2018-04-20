@@ -1,0 +1,9 @@
+{% macro render(form_element) %}
+{{ form_element.label }}
+{{ form_element() }}
+{% for error in form_element.errors %}
+<p style="color: red;">{{ error }}; </p>
+{% endfor %}
+<br>
+
+{% endmacro %}

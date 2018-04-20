@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div>
+    <div class="forms">
+        <!--<form action="/init"><input type="submit" value="Initialize database"></form>-->
+        <form action="/students"><input type="submit" value="Show students"></form>
+        <form action="/subjects"><input type="submit" value="Show subjects"></form>
+        <form action="/facspec"><input type="submit" value="Show faculties and specialities"></form>
+        <form action="/marks"><input type="submit" value="Show the table with marks"></form>
+    </div>
+    <div class="forms">
+        <form action="/addstudent"><input type="submit" value="Add student"></form>
+        <form action="/addsubject"><input type="submit" value="Add subject"></form>
+        <form action="/addfaculty"><input type="submit" value="Add faculty"></form>
+        <form action="/addspeciality"><input type="submit" value="Add speciality"></form>
+        <form action="/addmark"><input type="submit" value="Add mark"></form>
+    </div>
+</div>
+
+{% endblock %}

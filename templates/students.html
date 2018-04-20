@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div>
+        <table>
+            <tr>
+                <td>ID</td><td>Student's name</td><td>Course</td><td>Faculty</td><td>Speciality</td>
+            </tr>
+            {% for student in students %}
+                {% with s = student.get_values() %}
+                <tr>
+                    <td>{{ s.studentId }}</td>
+                    <td>{{ s.lastName + ' ' + s.firstName }}</td>
+                    <td>{{ s.course }}</td>
+                    <td>{{ s.faculty }}</td>
+                    <td>{{ s.speciality }}</td>
+                </tr>
+                {% endwith %}
+
+            {% endfor %}
+        </table>
+    </div>
+{% endblock %}

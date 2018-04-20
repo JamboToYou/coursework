@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% if title %}
+    <title>{{ title }}</title>
+    {% else %}
+    <title>Home</title>
+    {% endif %}
+    <style type="text/css">
+        a {
+            text-decoration: none;
+        }
+
+        .forms {
+            float: left;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <a href="/index"><h1>Students performance tracking system</h1></a>
+    <hr>
+    {% block content %} {% endblock %}
+</body>
+</html>

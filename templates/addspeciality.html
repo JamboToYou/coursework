@@ -1,0 +1,13 @@
+{% extends  "base.html" %}
+
+{% block content %}
+    <div>
+        <form action="/addspeciality" method="post">
+            {% from "macros.html" import render %}
+            {{ form.hidden_tag() }}
+            {{ render(form.facultyId) }}
+            {{ render(form.speciality) }}
+            {{ form.submit() }}
+        </form>
+    </div>
+{% endblock %}

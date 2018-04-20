@@ -1,0 +1,18 @@
+{% extends  "base.html" %}
+
+{% block content %}
+    <div>
+        <ul>
+        {% for item in faculties %}
+        <li>
+            <p>{{ item['faculty'].get_values()['facultyId'] }} {{ item['faculty'].get_values()['faculty'] }}</p>
+            <ul>
+            {% for speciality in item['specialities'] %}
+                <li><p>{{ speciality.get_values()['specialityId'] }}  {{ speciality.get_values()['speciality'] }}</p></li>
+            {% endfor %}
+            </ul>
+        </li>
+        {% endfor %}
+        </ul>
+    </div>
+{% endblock %}
